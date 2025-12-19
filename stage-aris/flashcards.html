@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link type="text/css" rel="stylesheet" href="styles/flashcards.css">
+            <script src="scripts/common.js"></script>
+            <title>flashcards</title>
+        </head>
+
+        <body>
+            <div id="card">
+
+                <label id="cardlab"></label>
+
+            </div>
+            <div class="horizontal" id="verify_question">
+                <button id="yesbtn">✓</button>
+                <button id="nobtn">✗</button>
+            </div>
+            
+            <label id = "num_label"></label>
+
+            <div id="endscreen" class="vertical">
+                <h1>Flashcards terminées: </h1>
+                <label class="lvlinfo">Score:</label>
+                <label class="lvlinfo">Pourcentage de réussite:</label>
+                <label class="lvlinfo">Temps:</label>
+                <button onclick="redirect('config-flashcards.html')">Rejouer !</button>
+            </div>
+        <button class="homebtn" onclick="redirect('index.html')">Accueil</button>
+        </body>
+
+    </html>
+    
+    <script src="scripts/flashcards.js"></script>
+</html>

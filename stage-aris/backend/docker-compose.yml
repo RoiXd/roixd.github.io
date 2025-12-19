@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: stage-aris-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: stage-aris-password
+      MONGO_INITDB_DATABASE: stage-aris-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      - stage-aris-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: stage-aris-mongo-express
+    restart: unless-stopped
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: stage-aris-password
+      ME_CONFIG_MONGODB_URL: mongodb://admin:stage-aris-password@mongodb:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: express
+      ME_CONFIG_BASICAUTH_PASSWORD: express-password
+      ME_CONFIG_MONGODB_SERVER: mongodb
+    ports:
+      - "8081:8081"
+    networks:
+      - stage-aris-network
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+volumes:
+  mongodb_data:
+    name: stage-aris-mongodb-data
+  mongodb_config:
+    name: stage-aris-mongodb-config
+
+networks:
+  stage-aris-network:
+    name: stage-aris-network
+    driver: bridge

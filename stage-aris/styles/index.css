@@ -1,0 +1,44 @@
+body{
+    padding-top: 25px;
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+}
+h1{
+    font-size: 32pt;
+    color: cadetblue;
+}
+
+h2{
+    font-size: 28pt;
+    color: cadetblue;
+}
+h3{
+    font-size: 22pt;
+    color: cadetblue;
+}
+
+#end{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+button {
+    height: 65px;
+    font-style: bold;
+    font-size: 20pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    border-radius: 20px;
+}
+#configbtn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(96, 50, 247);
+}
+#configbtn:hover {
+    background-color: rgb(72, 41, 174);
+}

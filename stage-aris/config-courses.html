@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajouter des cours</title>
+        <link type="text/css" href="styles/config_courses.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="select_course_container">Cours: 
+                <select id="course_select" class="extended_input"></select>
+                <button id="app_coursebtn">Ajouter un cours</button>
+                <button id="del_coursebtn">Supprimer le cours</button>
+        </div>
+        <br>
+        <div id="table-wrapper">
+            <table>
+                <thead>
+                    <th scope="col">Question</th>
+                    <th scope="col">Réponse</th>
+                </thead>
+
+                <tbody id="table">
+                    <tr>
+                    </tr>
+                </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><input type="text" id="question" class="extended_input"></td>
+                            <td><input type="text" id="response" class="extended_input"></td>
+                        </tr>
+                        <tr><th scope="row" colspan="2"><button id="add_questionbtn">Ajouter</button></td></tr>
+                        <tr><td scope="row" colspan="2"><label class="errlabel" id="err_quesiton_lab">Question déjà présente</td></label></tr>
+                    </tfoot>
+            </table>
+        </div>
+        <button id="playbtn" onclick="redirect('choose-game.html')">Jouer</button>
+        <div id="add_course_container">
+            <div class="vertical">
+                <div class="horizontal">Nom du cours: <input type="text" id="course_name_input"></div>
+                <br>
+                <div class="horizontal">Description: <textarea id="course_desc_area">Descritption</textarea></div>
+                <button id="add_coursebtn">Enregistrer</button>
+                <label class="errlabel" id="err_course_lab">Cours déjà inscrit</label>
+            </div>
+        </div>
+        <button class="homebtn" onclick="redirect('index.html')">Accueil</button>
+    </body>
+    <script src="scripts/config_courses.js"></script>
+    <script src="scripts/common.js"></script>
+</html>

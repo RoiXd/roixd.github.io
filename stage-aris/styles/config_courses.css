@@ -1,0 +1,196 @@
+body{
+    padding-top: 25px;
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+}
+#add_course_container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+}
+#add_course_container div {
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+
+#add_coursebtn {
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+#app_coursebtn {
+    height: 50px;
+    width: 200px;
+}
+#select_course_container {
+    height: 50px;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+}
+.vertical {
+    gap: 15px;
+    position: static;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: top;
+    width: 60%;
+}
+.horizontal{
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+#course_name_input {
+    height: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+    width: 50%
+}
+#course_desc_area{
+    height: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    font-size: 12pt;
+    width: 75%;
+}
+
+button{
+    height: 50px;
+    width: 175px;
+    position: relative;
+    font-style: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 14pt;
+}
+#add_questionbtn {
+    transform: translate(-50%, 0%);
+    left: 50%;
+    position: sticky;
+    top: 100%;
+}
+button:hover {
+    background-color: rgb(145, 145, 145);
+}
+.errlabel {
+    color: rgb(255, 77, 77);
+    font-size: 10pt;
+    visibility: hidden;
+}
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.select-wrapper{
+    position: relative;
+}
+
+#playbtn {
+    font-size: 32px; 
+    background-color: rgb(74, 255, 74);
+    font-style: bold;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 65px;
+    width: 175px;
+}
+
+#playbtn:hover{
+    background-color: rgb(51, 179, 51);
+}
+
+#course_select {
+    width: 33%; 
+    font-size: 12pt; 
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14pt;
+}
+#table-wrapper {
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 75%;
+    display: inline-block;
+    position: absolute;
+    height: 70%;
+    overflow-y: scroll;
+}
+tbody {
+    overflow: scroll;
+}
+thead {
+    top:0;
+    background-color: rgb(144, 215, 215);
+    position: sticky;
+}
+th, td {
+    position: inherit;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid gray;
+    text-align: center;
+}
+caption {
+    font-size: 8pt;
+    font-style: italic;
+}
+tfoot {
+    background-color: rgb(255, 255, 255);
+    height: 20%;
+    position: sticky;
+    bottom: 0;
+}
+tfoot tr td input {
+    width: 90%;
+    height: 95%;
+    font-size: 14pt;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+tfoot tr td, tfoot tr th {
+    border: none;
+}
+.homebtn {
+    background-color: rgb(192, 186, 198);
+    border: none;
+    border-radius: 35px;
+    left: 5%;
+    top: 10%;
+    position: absolute;
+    width: 75px;
+    height: 50px;
+}
+
+.homebtn:hover {
+     background-color: rgb(127, 118, 135);
+}
+#del_coursebtn {
+    background-color: rgb(203, 71, 71);
+}
+#del_coursebtn:hover {
+    background-color: rgb(133, 34, 34);
+}

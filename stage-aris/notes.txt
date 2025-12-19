@@ -1,0 +1,26 @@
+Site web qui aide à réviser de manière ludique et simple
+---------- Fonctionalités -------------
+- Ajouter des mots/définition et les relie à un cours
+- Jouer à des jeux créés à partir d'un ou plusieurs cours(Flashcards, memory)
+- Mesurer sa progression avec les résultats des jeux
+~ Ajouter un système d'objectifs et/ou de niveaux
+~ Enregistrer les cours(+les publier)
+
+Pages:
+ACCUEIL: [1h] (~fini en 50min)
+Explications des règles, présentation
+Cours préparés par la communauté [1h30]
+CHOIX DU JEU: [30min]
+feature Ajouer des jeux finie en 6h -> tableau + meilleure interface
+"HOME":
+Niveaux: [30min]
+objectifs: [30min]
+LES JEUX:
+- Le memory [programmation 1h30, layout 30min, options 30min] 
+memory classique (les mots sont retournés ou non) les points sont comptés à la suite et au temps
+- Les Flashcards [programmation 1h, layout 30min, options 10min(c/v)]
+On a des cartes, on retourne les cartes, si on a bon, +1 point sinon 0 point
+
+Forme, liens, finitions, débogage [3h]
+
+TOTAL de temps: 16h
